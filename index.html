@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To Do Task List</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>To do list generator</h1>
+    <form>
+        <fieldset>
+            <legend>Who will do the task</legend>
+            <label>
+                <input type="radio" name="person" value="Terry" checked>Terry
+            </label>
+            <label>
+                <input type="radio" name="person" value="Sam">Sam
+            </label>
+            <label>
+                <input type="radio" name="person" value="Alan">Alan
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Choose difficulty and name of task</legend>
+            <label for="difficulty">Task Difficulty</label>
+            <select name="difficutly">
+                <option value="laughably-easy">Laughably Easy</option>
+                <option value="easy">Easy</option>
+                <option value="moderate">Moderate</option>
+                <option value="elbow-grease">A little elbow grease</option>
+                <option value="difficult">Difficult</option>
+                <option value="very-difficult">Call your Mom, you're not finishing this task</option>
+            </select>
+            <label>Task description</label>
+            <textarea id="task" rows="5" cols="40"></textarea>
+        </fieldset>
+        <input type="submit" name="submit" value="Create Task" onclick="CreateTask()"/>
+    </form>
+    <div id="list-container"></div>
+    <script type="text/javascript" src="Script/taskJS.js"></script>
+</body>
+</html>

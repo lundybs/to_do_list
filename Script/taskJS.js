@@ -1,15 +1,19 @@
 ﻿function CreateTask() {
+    event.preventDefault();
     console.log("In CreateTask function!");
 
-    var name = document.getElementsByName('person');
-    var difficult = document.getElementsByName('difficulty');
+
+    var name = document.querySelector('input[name="person"]:checked').value;
+    var difficult = document.getElementById('complexity').value;
     var description = document.getElementById('task');
 
-    var parent = document.getElementById("list-container");
-    var ul = document.createElement("ul");
-    var li = document.createElement('li');
+    //var parent = document.getElementById("list-container");
+    //var ulNode = document.createElement("ul");
 
-    li.innerHTML = name + "has a task of" + description + "(" + difficult + ").";
-    ul.appendChild(li);
+    //var liNode = document.createElement('li');
+    //var liText = document.createTextNode(name + "has a task of" + description + "(" + difficult + ").");
 
+    //liNode.appendChild(liText);
+    //ulNode.appendChild(liNode);
+    //parent.appendChild(ulNode);
 }

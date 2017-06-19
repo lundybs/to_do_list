@@ -5,15 +5,15 @@
 
     var name = document.querySelector('input[name="person"]:checked').value;
     var difficult = document.getElementById('complexity').value;
-    var description = document.getElementById('task');
+    var description = document.getElementById('task').value;
 
-    //var parent = document.getElementById("list-container");
-    //var ulNode = document.createElement("ul");
+    var parent = document.getElementById("list-container");
+    var ulNode = document.createElement("ul");
 
-    //var liNode = document.createElement('li');
-    //var liText = document.createTextNode(name + "has a task of" + description + "(" + difficult + ").");
+    var liNode = document.createElement('li');
+    var liText = document.createTextNode(name + " has a task of " + description + ", (" + difficult + ").");
 
-    //liNode.appendChild(liText);
-    //ulNode.appendChild(liNode);
-    //parent.appendChild(ulNode);
+    liNode.appendChild(liText);
+    ulNode.appendChild(liNode);
+    parent.appendChild(ulNode);
 }
